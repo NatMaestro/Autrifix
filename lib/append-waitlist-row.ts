@@ -54,13 +54,13 @@ export async function appendWaitlistRow(params: {
   services?: string
 }): Promise<void> {
   const spreadsheetId = process.env.GOOGLE_SHEETS_SPREADSHEET_ID?.trim()
-  const range = process.env.GOOGLE_SHEETS_RANGE ?? "Waitlist!A:E"
+  const range = process.env.GOOGLE_SHEETS_RANGE?.trim()
 
   const hasCreds =
     Boolean(process.env.GOOGLE_SERVICE_ACCOUNT_JSON_BASE64?.trim()) ||
     Boolean(process.env.GOOGLE_SERVICE_ACCOUNT_JSON?.trim())
 
-  if (!hasCreds || !spreadsheetId) {
+  if (!hasCreds || !spreadsheetId || !range) {
     throw new Error("MISSING_CONFIG")
   }
 
