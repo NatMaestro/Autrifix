@@ -65,13 +65,13 @@ export function WaitlistSection() {
   }
 
   return (
-    <section id="waitlist" className="py-24 md:py-32 relative">
+    <section id="waitlist" className="py-24 md:py-32 relative min-w-0 overflow-x-hidden">
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] bg-primary/10 rounded-full blur-3xl pointer-events-none" />
 
       <div className="container mx-auto px-4 md:px-6 relative z-10">
-        <div className="max-w-3xl mx-auto text-center">
+        <div className="max-w-3xl mx-auto min-w-0 text-center">
           {isSubmitted ? (
-            <div className="glass rounded-3xl p-8 md:p-12">
+            <div className="glass rounded-3xl p-5 sm:p-8 md:p-12 min-w-0">
               <div className="flex justify-center mb-6">
                 <div className="size-20 rounded-full bg-primary/20 flex items-center justify-center">
                   <CheckCircle className="size-10 text-primary" />
@@ -96,7 +96,7 @@ export function WaitlistSection() {
               </div>
             </div>
           ) : (
-            <div className="glass rounded-3xl p-8 md:p-12">
+            <div className="glass rounded-3xl p-5 sm:p-8 md:p-12 min-w-0">
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/20 text-primary text-sm mb-6">
                 <Sparkles className="size-4" />
                 <span>Limited Early Access</span>
@@ -156,7 +156,10 @@ export function WaitlistSection() {
                 </button>
               </div>
 
-              <form onSubmit={handleSubmit} className="max-w-md mx-auto space-y-4 text-left">
+              <form
+                onSubmit={handleSubmit}
+                className="max-w-md mx-auto w-full min-w-0 space-y-4 text-left px-0"
+              >
                 <div>
                   <Input
                     type="email"
@@ -199,11 +202,11 @@ export function WaitlistSection() {
                     {error}
                   </p>
                 )}
-                <div className="flex justify-center pt-2">
+                <div className="flex justify-center pt-2 w-full min-w-0">
                   <Button
                     type="submit"
                     size="lg"
-                    className="h-12 rounded-full px-8 glow-green w-full sm:w-auto"
+                    className="h-12 rounded-full px-5 sm:px-8 glow-green w-full max-w-full min-w-0 shrink sm:w-auto sm:max-w-none"
                     disabled={isLoading}
                   >
                     {isLoading ? (

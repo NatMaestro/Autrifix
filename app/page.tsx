@@ -10,7 +10,7 @@ import { Footer } from "@/components/footer"
 
 export default function HomePage() {
   return (
-    <main className="relative">
+    <main className="relative min-w-0 overflow-x-hidden">
       <Navbar />
       <HeroSection />
       <FeaturesSection />

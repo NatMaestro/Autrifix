@@ -32,20 +32,26 @@ export function HeroSection() {
               </p>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Button asChild size="lg" className="rounded-full text-base px-8 glow-green">
-                <a href="#waitlist">
+            <div className="flex flex-col sm:flex-row gap-4 w-full min-w-0 max-w-full">
+              <Button
+                asChild
+                size="lg"
+                className="rounded-full text-base px-6 sm:px-8 glow-green w-full min-w-0 max-w-full shrink sm:w-auto sm:max-w-none"
+              >
+                <a href="#waitlist" className="min-w-0">
                   Join Waitlist
-                  <ArrowRight className="ml-2 size-5" />
+                  <ArrowRight className="ml-2 size-5 shrink-0" />
                 </a>
               </Button>
-              <Button 
-                asChild 
-                variant="outline" 
-                size="lg" 
-                className="rounded-full text-base px-8 border-border/50 hover:bg-secondary/50"
+              <Button
+                asChild
+                variant="outline"
+                size="lg"
+                className="rounded-full text-base px-6 sm:px-8 border-border/50 hover:bg-secondary/50 w-full min-w-0 max-w-full shrink sm:w-auto sm:max-w-none"
               >
-                <a href="#how-it-works">Learn More</a>
+                <a href="#how-it-works" className="min-w-0">
+                  Learn More
+                </a>
               </Button>
             </div>
 
