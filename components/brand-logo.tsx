@@ -14,10 +14,10 @@ export function BrandLogo({ className, priority = false }: BrandLogoProps) {
       alt="AutriFix"
       width={200}
       height={56}
-      sizes="(max-width: 768px) 75vw, 200px"
+      sizes="(max-width: 768px) 85vw, 220px"
       priority={priority}
       className={cn(
-        "h-7 w-auto max-w-[13rem] object-contain object-left sm:h-8 md:max-w-[14rem]",
+        "h-20 w-auto max-w-[16rem] object-contain object-left sm:h-10 md:h-26 md:max-w-[17rem]",
         className,
       )}
     />
